@@ -311,6 +311,76 @@ form button{
 
 }
 
+/* Desktop version */
+@media (min-width:720px) {
+
+  body{
+     display: grid;
+     place-content: center;
+     
+  }
+  .container{
+     display: grid;
+     place-content: center;
+     grid-template-columns: 1fr 1fr;
+     min-width: 950px;  /*might need to come back to this*/
+    /* min-width: 80vw; */ /*might need to come back to this*/
+  }
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .clear{
+    margin: 0;
+  }
+  .left-card{
+    border-radius: 1rem 0 0 1rem;
+    padding: 2rem;
+  }
+  .right-card{
+    border-radius: 0 1rem 1rem 4rem; /*might need to creat another class woth DOM to do the affect on result card*/
+    display: grid;
+    place-content: center;
+  }
+
+  .calculation-result{
+    border-radius: 0 1rem 1rem 4rem;
+    padding: 2.25rem 2.25rem;
+  }
+  .term-rate-container{
+    border: 1px solid saddlebrown;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+
+  .input-title{
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .money{
+    top:36%;
+    left: 27.65%;
+  }
+  .years{
+    top: 45.25%;
+    left: 27.65%;
+  }
+  #years{
+    padding-left: 5.5rem;
+  }
+  .rate{
+    top: 45.2%;
+    left: 45.87%;
+  }
+}
+
+
+
  
 .monthly-payment{
   border-bottom: 1px solid var(--Slate-500) ;
@@ -331,3 +401,5 @@ form button{
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
+
+
