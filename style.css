@@ -325,6 +325,7 @@ form button{
      grid-template-columns: 1fr 1fr;
      min-width: 950px;  /*might need to come back to this*/
     /* min-width: 80vw; */ /*might need to come back to this*/
+    padding: 2rem;
   }
 
   .title{
@@ -363,12 +364,12 @@ form button{
     margin-bottom: 0.5rem;
   }
   .money{
-    top:34%;
-    left: 22.65%;
+    top:36%;
+    left: 29.2%;
   }
   .years{
     top: 45.25%;
-    left: 27.65%;
+    left: 29.3%;
   }
   #years{
     padding-left: 5.5rem;
