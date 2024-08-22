@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+
+</head>
+<body>
+
+  <div class=" container">
+
+    <div class="left-card">
+
+      <div class="title">
+        <h1>Mortgage Calculator</h1>
+        <button class="clear">Clear All</button>
+      </div>
+
+      <form action="" novalidate>
+
+        <div class="amount form-flex" id="money-amount-input-wrap">
+          <span class="input-title">Mortgage Amount</span>
+          <input type="number" name="$" id="money-amount" class="input-group" >
+          <p class="unit money">$</p>
+          <span class="off">This feild is required </span>
+        </div>
+
+        <div class="term-rate form-flex" id="term-rate-input-wrap">
+
+          <span class="input-title">Mortgage Term</span>
+          <input type="number" name="years" id="years" class="input-group"  > 
+          <p class="unit term-rate-unit years">years</p>
+          <span class=" off">This feild is required </span>
+
+          <span class="input-title">Interest Rate</span>
+          <input type="number" name="%" id="percentage" class="input-group" step="0.01" >
+          <p class="unit term-rate-unit rate">%</p>
+          <span class="off percentage">This feild is required </span>
+        </div>
+
+        <div class="type form-flex">
+          <span class="input-title">Mortgage Type</span>
+
+          <div class="chose-type">
+            <input type="radio" name="mortgage-type" id="repayment" value="repayment"> 
+            <label>Repayment</label>
+          </div>
+
+          <div class="chose-type">
+            <input type="radio" name="mortgage-type" id="Interest" value="interest"> 
+            <span >Interest Only</span>
+          </div>
+          
+          <span class=" off">This feild is required </span>
+        </div>
+
+        <button>
+          <img src="./assets/images/icon-calculator.svg" alt="" srcset="">
+          Calculate Repayments
+        </button>
+
+      </form>
+    
+    
+
+    </div>
+
+  
+    <!-- Empty results start -->
+     <!-- right card -->
+      
+    <div class="right-card">
+
+      <div class="img-container">
+        <img src="./assets/images/illustration-empty.svg" alt="" srcset="">
+      </div>
+
+      <h1 class="result">Results shown here</h1>
+  
+      <p class="result">
+        Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be.
+      </p>
+    </div>
+
+  
+    <!-- Empty results end -->
+  
+    <!-- Completed results start -->
+    <div class="calculation-result off">
+      <h1>Your results</h1>
+  
+      <p class="result-content">
+        Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.
+      </p>
+
+      <div class="result-outcome">
+        <p>Your monthly repayments</p>
+        <h1 class="monthly-payment">$$$$$$$</h1>
+        <p>Total you'll repay over the term</p>
+        <h2 class="leftover-payment">$$$$$$$</h2>
+      </div>
+
+
+
+    </div>
+
+
+    <!-- Completed results end -->
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>
+    Coded by <a href="#">Danny Chen</a>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  input,img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  h1,input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* Hide Input Number Arrows   */
+/*  Chrome, Safari, Edge, Opera */ 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+:root{
+
+--Lime: hsl(61, 70%, 52%);
+--Red: hsl(4, 69%, 50%);
+
+--White: hsl(0, 0%, 100%);
+--Slate-100: hsl(202, 86%, 94%);
+--Slate-300: hsl(203, 41%, 72%);
+--Slate-500: hsl(200, 26%, 54%);
+--Slate-700: hsl(200, 24%, 40%);
+--Slate-900: hsl(202, 55%, 16%);
+
+}
+
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500 700;
+    font-style: normal;
+}
+
+.container{
+  border: 1px solid blue;
+  max-width: 46rem;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin-bottom: 0.5rem;
+}
+
+input[type=number]{
+  border: 1px solid var(--Slate-500);
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+  color: var(--Slate-900);
+  border-radius: 0.25rem;
+  outline: none;
+  /* -webkit-appearance: none; */
+}
+
+/* $ amount input */
+#money-amount{
+  padding-left: 3.25rem;
+}
+
+.input-group{
+  margin-bottom:1rem ;
+  position: relative;
+  cursor: pointer;
+}
+
+.unit{
+  font-weight: 700;
+  color: var(--Slate-700);
+  background-color: var(--Slate-100);
+  width: 2.75rem;
+  
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  
+  overflow: hidden;
+  /* top: 50%; */
+}
+.money{
+  /* position: absolute; */
+  height: 1.95rem;
+  top: 120px;
+  left: 19px;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.years{
+  /* position: absolute; */
+  width: 4.75rem;
+  height: 1.85rem;
+  top: 195px;
+  right: 19px;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.rate{
+  /* position: absolute; */
+  top: 268px;
+  right: 19px;
+  width: 2.85rem;
+  height: 1.95rem;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* .form-flex{ */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* border: 1px solid var(--Slate-900); */
+/* } */
+/* .input{
+  border-radius: 0.25rem;
+  border: 1px solid var(--Slate-700);
+  height: 2.75rem;
+  width: 100%;
+  margin-top: 0.5rem;
+} */
+
+.title h1{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Slate-900);
+}
+
+.clear{
+  text-decoration: underline;
+  color: var(--Slate-700);
+  background-color: transparent;
+  border: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+
+
+
+.left-card{
+  border: 1px solid red;
+  padding: 1rem;
+}
+
+/* input radio  */
+.chose-type{
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  border: 1px solid var(--Slate-500);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.chose-type input{
+  height: 1rem;
+  width: 1rem;
+  
+}
+
+input [type=”radio”]:checked{
+  background-color: var(--Lime);
+  /* border: ; */
+}
+
+/* button */
+form button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Lime);
+  border: none;
+  border-radius: 100vw;
+  padding: 0.75rem;
+  gap: .75rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--Slate-900);
+  margin-top: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+
+
+/* on and off feature */
+.off{
+  display: none;
+  
+}
+
+.error{
+  color: var(--Red);
+  display: block;
+  margin: 0;
+}
+
+
+/* right car or buttom card */
+.right-card{
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  background-color: var(--Slate-900);
+  color: var(--White);
+  padding: 1rem;
+}
+.img-container{
+  margin: auto;
+}
+
+.right-card h1{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.right-card p{
+  color: var(--Slate-300);
+  text-align: center;
+  font-size: 1rem;
+
+}
+/* calculation result */
+
+.calculation-result{
+  background-color: var(--Slate-900);
+  color: var(--White);
+  padding: 1.5rem;
+}
+.calculation-result h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.result-content{
+  color: var(--Slate-300);
+  margin-bottom: 1rem;
+}
+
+.result-outcome{
+  border-top: 4px solid var(--Lime);
+  background-color: #1B262C;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-height: 14rem;
+  margin-bottom: 2rem;
+}
+
+.result-outcome p{
+  color: var(--Slate-300);
+}
+
+.result-outcome h1{
+  color: var(--Lime);
+  font-size: 3rem;
+
+}
+
+ 
+.monthly-payment{
+  border-bottom: 1px solid var(--Slate-500) ;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+.leftover-payment{
+  padding: 0.5rem 0;
+  font-size: 2rem;
+}
+
+/* footer */
+.attribution { 
+  font-size: 12px; 
+  text-align: center; 
+  /* font-weight: bold; */
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
