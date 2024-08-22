@@ -85,12 +85,13 @@ body{
 }
 
 .container{
-  border: 1px solid blue;
-  max-width: 46rem;
+  /* border: 1px solid blue; */
+  max-width: 860px;
   display: grid;
   place-content: center;
   min-height: 100vh;
   margin-bottom: 0.5rem;
+  
 }
 
 input[type=number]{
@@ -187,7 +188,7 @@ input[type=number]{
 
 
 .left-card{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 1rem;
 }
 
@@ -311,8 +312,8 @@ form button{
 
 }
 
-/* Desktop version */
-@media (min-width:720px) {
+/* Desktop version  600 px*/
+@media (min-width:600px) {
 
   body{
      display: grid;
@@ -323,7 +324,7 @@ form button{
      display: grid;
      place-content: center;
      grid-template-columns: 1fr 1fr;
-     min-width: 950px;  /*might need to come back to this*/
+     /*min-width: 450px;*/  /*might need to come back to this*/
     /* min-width: 80vw; */ /*might need to come back to this*/
     padding: 2rem;
   }
@@ -352,7 +353,7 @@ form button{
     padding: 2.25rem 2.25rem;
   }
   .term-rate-container{
-    border: 1px solid saddlebrown;
+    /* border: 1px solid saddlebrown; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -362,27 +363,110 @@ form button{
   .input-title{
     display: block;
     margin-bottom: 0.5rem;
+    font-size: 0.75rem;
   }
   .money{
-    top:36%;
-    left: 29.2%;
+    top: 39.75%;
+    left: 8.88%;
   }
   .years{
-    top: 45.25%;
-    left: 29.3%;
+    top: 47.25%;
+    left: 9%;
   }
   #years{
     padding-left: 5.5rem;
   }
   .rate{
-    top: 45.2%;
-    left: 45.87%;
+    top: 47.25%;
+    left: 39.5%;
+  }
+}
+
+
+/* Desktop version  800 px*/
+@media (min-width:800px) {
+  .money{
+    top: 387px;
+    left: 102px;
+  }
+  .years{
+    top: 465px;
+    left: 102px;
+  }
+  #years{
+    padding-left: 5.5rem;
+  }
+  .rate{
+    top: 465px;
+    left: 325px;
+  }
+}
+
+/* Desktop version  900 px */
+@media (min-width:900px) {
+  .money{
+    top: 387px;
+    left: 148px;
+  }
+  .years{
+    top: 465px;
+    left: 149px;
+  }
+  #years{
+    padding-left: 5.5rem;
+  }
+  .rate{
+    top: 465px;
+    left: 370px;
+  }
+}
+
+/*  Desktop 1240 x 600*/
+@media (min-width:1240px) {
+  .money{
+    top: 387px;
+    left: 250px;
+  }
+  .years{
+    top: 465px;
+    left: 198px;
+  }
+  #years{
+    padding-left: 5.5rem;
+  }
+  .rate{
+    top: 465px;
+    left: 420px;
+  }
+}
+
+
+/* Desktop version  1000 px*/
+@media (min-width:1000px) {
+  .money{
+    top: 387px;
+    left: 198px;
+  }
+  .years{
+    top: 465px;
+    left: 198px;
+  }
+  #years{
+    padding-left: 5.5rem;
+  }
+  .rate{
+    top: 465px;
+    left: 420px;
   }
 }
 
 
 
- 
+
+
+
+
+
 .monthly-payment{
   border-bottom: 1px solid var(--Slate-500) ;
   margin-bottom: 1rem;
